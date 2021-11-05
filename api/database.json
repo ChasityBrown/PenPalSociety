@@ -1,0 +1,43 @@
+{
+    "authors": [{
+        "id": 1,
+        "name": "Santa Claus",
+        "email": "northpole@lane.com"
+    }, {
+        "id": 2,
+        "name": "J.K. Rowling",
+        "email": "imageniusandyoureamuggle@hp.com"
+    }, {
+        "id": 3,
+        "name": "Sharon Shinn",
+        "email": "iwriteamazingbooks@myfave.com"
+    }    
+    ],
+    "recipients": [{
+        "id": 1,
+        "name": "Blue Ivy Carter",
+        "email": "myparentsarericherthanyours@theroc.com"
+    },{
+        "id": 2,
+        "name": "Harry Potter Fan",
+        "email": "whoareyoucallingmudblood@ilovehp.com"
+    },{
+        "id": 3,
+        "name": "The Archangel",
+        "email": "isingbetterthanyourbest@irule.com"
+    }],
+    "topics": [{
+        "id": 1,
+        "type": "Inquiry"
+    }, {
+        "id": 2,
+        "type": "Birthday"
+    }, {
+        "id": 3,
+        "type": "Holiday"
+    }, {
+        "id": 4,
+        "type": "Just Because"
+    }],
+    "letters": []
+}
