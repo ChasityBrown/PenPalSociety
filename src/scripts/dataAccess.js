@@ -3,18 +3,18 @@ const applicationState = {
     recipients: [],
     topics: [],
     letters: [],
-    completedLetters: {
+    currentLetter: {
         authorId: 0,
         recipientId: 0,
         topicId: 0,
-        letterId: 0
+        letterBody: ""
     }
 }
 const API = "http://localhost:8088"
 const mainContainer = document.querySelector("#container")
 
 export const setAuthorId = (id) => {
-    applicationState.completedLetters.authorId = id
+    applicationState.currentLetters.authorId = id
 }
 export const fetchAuthors = () => {
     return fetch(`${API}/authors`)
@@ -44,13 +44,13 @@ export const getTopics = () => {
         }
 export const sendLetter = () => {
     const date = new Date().toLocaleDateString()
-    applicationState.completedLetters.dateSent = date
+    applicationState.currentLetters.dateSent = date
     const fetchOptions = {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(applicationState.completedLetters)
+        body: JSON.stringify(applicationState.currentLetters)
     }
     return fetch(`${API}/letters`, fetchOptions)
         .then(response => response.json())
